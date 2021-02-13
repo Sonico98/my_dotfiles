@@ -1,0 +1,53 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Change autosuggestion color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=245'
+
+# Aliases
+alias qaac='mkdir aac; \
+	wine ~/.wine/drive_c/qaac/qaac64.exe \
+	-V 100 --copy-artwork -d ./aac *.flac'
+
+
+alias icat='pixcat resize -r bilinear -w 64 -h 32 -W 256 -H 256 -a left' 
+alias xserv='Xephyr -ac -screen 1366x768 -reset :2 &'
+
+
+alias feh='feh --scale-down --auto-zoom \
+	--draw-tinted --info "echo Resolution: %wx%h"'
+
+
+alias yays='yay -Syu --devel --needed \
+	linux linux-firmware linux-headers linux-api-headers \
+	systemd systemd-libs systemd-sysvcompat lib32-systemd \
+	btrfs-progs xfsprogs e2fsprogs ntfs-3g lib32-e2fsprogs'
+
+
+# Enable IBus, used by clight
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+# Whenever a not-found command is used, search the repositories for a matching pkg
+# Requires pkgfile
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,0 +1,49 @@
+# Config for workstyle
+#
+# Format:
+# "pattern" = "icon"
+#
+# The pattern will be used to match against the application name.
+# The icon will be used to represent that application.
+#
+# Note if multiple patterns are present in the same application name,
+# precedence is given in order of apparition in this file.
+
+"aur" = ""
+"archwiki" = ""
+"arch linux" = ""
+"google drive" = ""
+"google chrome" = ""
+"google" = ""
+"whatsapp" = ""
+"chromium" = ""
+"ranger" = ""
+"spacefm" = ""
+"file manager" = ""
+"discord" = ""
+"firefox" = ""
+"private browsing" = ""
+"qbittorrent" = ""
+"uget" = ""
+"telegram" = ""
+"videostream" = ""
+"kitty" = ""
+################
+"gimp" = ""
+"gnu image manipulation program" = ""
+"cantata" = ""
+"feh" = ""
+"gthumb" = ""
+"mp3tag" = "笠"
+"mpv" = ""
+################
+"bluetooth" = ""
+"calculator" = ""
+"disk usage" = ""
+################
+"libreoffice" = ""
+"libreoffice calc" = ""
+"libreoffice writer" = ""
+".pdf" = ""
+"vim" = ""
+"music" = ""
